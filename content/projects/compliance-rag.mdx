@@ -1,0 +1,26 @@
+---
+title: "Hospital Compliance RAG Automation"
+date: "2024-06-01"
+excerpt: "Automated answering of complex hospital compliance questionnaires using RAG and LLMs, reducing manual effort by 60%."
+tags: ["RAG", "LLM", "NLP", "Automation"]
+featured: true
+techStack: ["LangChain", "ChromaDB", "Ollama", "Python"]
+methodologies: ["Retrieval-Augmented Generation", "Semantic Search", "Prompt Engineering"]
+impact: "Reduced manual effort for marketing executives by 60% by automating responses to complex hospital compliance questionnaires."
+workflow:
+  - "Engineered a semantic embedding workflow using TF-IDF and transformer-based models to index 10,000+ unstructured documents."
+  - "Developed a Microsoft Office plugin integrating local LLM inference (Ollama) to suggest context-aware answers in real-time."
+---
+
+## Problem
+Hospital compliance questionnaires are dense, repetitive, and critical. Marketing and field executives spent extensive hours manually searching through thousands of PDF manuals and policy docs to answer them accurately.
+
+## Solution Overview
+Built a **Retrieval-Augmented Generation (RAG)** pipeline to automate this workflow.
+- **Ingestion**: Processed 10,000+ documents with `pydocx` and `pyexcel`.
+- **Embedding**: Indexed text using TF-IDF and transformer-based embeddings in **ChromaDB**.
+- **Delivery**: Created a **Microsoft Office plugin** that suggests answers in real-time as users fill out forms.
+
+## Impact
+- **60% reduction** in manual effort for compliance teams.
+- High-level data confidentiality maintained via local LLM inference (Ollama).

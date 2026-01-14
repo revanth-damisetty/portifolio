@@ -1,0 +1,25 @@
+---
+title: "Mobile Tamil Sign Language Recognition"
+date: "2024-01-01"
+excerpt: "Optimized ML pipeline for mobile-based recognition of 247 Tamil sign language characters. Published in IEEE NKCon 2024."
+tags: ["Mobile ML", "Computer Vision", "Research", "IEEE"]
+featured: false
+techStack: ["Flask", "Angular", "Scikit-learn", "OpenCV"]
+methodologies: ["Image Processing", "SVM Bagging", "Feature Extraction (LBP)"]
+impact: "Improved recognition accuracy to 74% for 247 Tamil characters with <3s latency on mobile devices, bridging a critical gap in vernacular accessibility."
+workflow:
+  - "Benchmarked preprocessing techniques, identifying CLAHE for contrast enhancement and Non-Local Means for denoising as optimal."
+  - "Implemented a Bagging ensemble of SVMs on Local Binary Pattern (LBP) features, outperforming traditional HOG-based methods."
+---
+
+## Overview
+Developed an Automatic Sign Language Recognition (ASLR) system for the **247 Tamil alphabets** to aid the deaf and hard-of-hearing community. The focus was on optimizing the ML lifecycle for mobile deployment.
+
+## Technical Approach
+- **Benchmarking**: Rigorously tested preprocessing techniques. Found **CLAHE** best for contrast and **Non-Local Means (NLM)** best for denoising.
+- **Feature Engineering**: **Local Binary Patterns (LBP)** outperformed HOG for capturing hand textures.
+- **Modeling**: Implemented a **Bagging ensemble of SVMs**, boosting accuracy from 59% to **74%**.
+
+## Architecture
+- **Hybrid Cloud-Mobile**: Mobile client (Angular) for capture, sending frames to a Flask server for heavy inference.
+- **Optimization**: Reduced prediction latency to **<3 seconds per frame** on mobile networks.

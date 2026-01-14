@@ -1,0 +1,33 @@
+---
+title: "FinAnalytica: RAG Financial Intelligence"
+date: "2024-12-01"
+excerpt: "A full-stack RAG system integrating structured financial fundamentals and unstructured SEC filings for AI-powered market analysis."
+tags: ["RAG", "LLM", "Finance", "Vector DB"]
+githubUrl: "https://github.com/revanthdamisetty"
+featured: true
+techStack: ["Python", "FastAPI", "ChromaDB", "GPT-4", "SQL"]
+methodologies: ["Retrieval-Augmented Generation", "Hybrid Search", "Data Engineering"]
+coverImage: "/images/finanalytica.png"
+impact: "Delivered a modular platform capable of comprehensive document-level insight retrieval, enabling semantic question answering and cross-market correlation discovery."
+workflow:
+  - "Constructed a dual-pipeline ingestion architecture consolidating quarterly fundamentals (SQL) and unstructured SEC filings (Vector DB)."
+  - "Engineered a hybrid retrieval layer combining SQL factual querying with semantic search to synthesize structured metrics and qualitative insights."
+---
+
+## Problem & Stakes
+Financial analysis requires synthesizing vast amounts of structured data (metrics, ratios) and unstructured text (earnings calls, 10-K filings). bridging these two modalities for an LLM to reason over accurately is a complex data engineering challenge.
+
+## Solution Overview
+FinAnalytica is a **Retrieval-Augmented Generation (RAG) system** that unifies SQL-based fundamentals with vector-based document search. It allows users to ask complex questions like "How did Apple's R&D spend correlate with their strategic shift mentioned in the Q3 earnings call?"
+
+## System Architecture
+1.  **Dual-Pipeline Ingestion**: 
+    - **Structured**: Fetches quarterly fundamentals via `yfinance` into a normalized SQLite schema.
+    - **Unstructured**: Parses 10-K/10-Q PDFs and earnings transcripts, chunks them, and generates embeddings using `text-embedding-3-large`.
+2.  **Hybrid Retrieval Layer**: Combines SQL factual querying with semantic vector search (Chroma/FAISS) to provide the LLM with a complete context window.
+3.  **LLM Fusion Engine**: Synthesizes the retrieved multi-modal data to generate coherent, fact-backed financial insights.
+
+## Key Outcomes
+- **Production-Grade Pipeline**: Implemented idempotent ingestion with hash-based update tracking.
+- **Advanced Retrieval**: Enabled semantic filtering by ticker, quarter, and document source.
+- **Impact**: Delivered a modular platform capable of comprehensive document-level insight retrieval and cross-market correlation discovery.

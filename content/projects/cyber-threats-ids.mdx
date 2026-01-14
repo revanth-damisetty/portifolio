@@ -1,0 +1,26 @@
+---
+title: "ML-Based Intrusion Detection System"
+date: "2024-02-01"
+excerpt: "Intelligent IDS leveraging Decision Trees to detect cyber threats with 99.19% accuracy. Published in IJSREM 2024."
+tags: ["Cybersecurity", "Machine Learning", "Network Security"]
+featured: false
+techStack: ["Python", "Scikit-learn", "Wireshark", "Pandas"]
+methodologies: ["Packet Analysis", "Supervised Learning", "Anomaly Detection"]
+impact: "Achieved 99.19% accuracy in detecting malicious network traffic, validated against simulated DDoS attacks."
+workflow:
+  - "Captured and analyzed network traffic via Wireshark, extracting key features like TTL, packet size, and port numbers."
+  - "Benchmarked various classifiers (SVM, RF, KNN) and optimized a Decision Tree model to distinguish benign vs. malicious packets."
+---
+
+## Problem
+Traditional signature-based intrusion detection systems (IDS) fail to recognize evolving or zero-day network threats.
+
+## Solution
+Developed an ML-powered IDS that analyzes packet-level features to classify traffic as benign or malicious.
+- **Data Collection**: Captured traffic via **Wireshark** and extracted features like TTL, packet size, and port numbers.
+- **Modeling**: Benchmarked classifiers (SVM, RF, KNN), with **Decision Trees** achieving the best performance.
+
+## Impact
+- **99.19% Accuracy** with near-perfect precision for malicious packets.
+- Validated effectiveness against simulated **DDoS attacks**.
+- Published findings in **IJSREM 2024**.

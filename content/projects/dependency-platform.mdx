@@ -1,0 +1,27 @@
+---
+title: "Dependency Management Tool"
+date: "2024-07-01"
+excerpt: "A graph-based platform effectively visualizing 10,000+ internal packages, reducing vulnerability detection time by 90% at GE Healthcare."
+tags: ["Graph DB", "Python", "DevOps", "Visualization"]
+featured: true
+techStack: ["Neo4j", "Python", "Angular", "Docker", "Flask"]
+methodologies: ["Graph Theory", "Static Analysis", "System Design"]
+impact: "Reduced vulnerability detection time by 90% and accelerated release cycles by 30% by visualizing 10,000+ internal packages."
+workflow:
+  - "Architected a crawler subsystem to extract dependencies from heterogeneous binaries (C, Java, Python) into a hybrid MongoDB/MySQL store."
+  - "Built a comparison module to visually highlight added/removed/modified dependencies, enabling developers to trace compilation errors to specific changes."
+---
+
+## Problem & Stakes
+In a large healthcare enterprise, managing dependencies across thousands of microservices is critical. Undetected changes or version mismatches can cause systemic errors in deployed applications, leading to costly downtime and compliance issues.
+
+## Solution Overview
+I architected a **Dependency Management and Analysis Platform** that ingests codebase metadata and constructs a queryable dependency graph.
+- **Crawler Subsystem**: Extracts dependencies from C-based binaries, Java apps, and Python services.
+- **Hybrid Storage**: Uses **MongoDB** for unstructured graphs and **MySQL** for structured specs.
+- **Comparison Module**: A visual diff tool for dependency trees, highlighting added/removed/modified nodes.
+
+## Impact
+- **90% faster** vulnerability detection.
+- **30% acceleration** in release cycles.
+- Scaled to handle dependencies for **4 different healthcare modalities**.

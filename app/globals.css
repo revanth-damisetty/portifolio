@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* HackerRank Light Theme Base */
+    --background: 210 20% 98%;
+    /* Very light gray #f3f7f7 approx */
+    --foreground: 215 14% 34%;
+    /* Dark gray #39424e */
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 14% 34%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 14% 34%;
+
+    /* HackerRank Green */
+    --primary: 146 100% 39%;
+    /* #00c853 / #00ea64 approx */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 14% 34%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 10% 55%;
+
+    --accent: 210 20% 96%;
+    --accent-foreground: 215 14% 34%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 20% 85%;
+    /* Light border #d0d4dd */
+    --input: 214 20% 85%;
+    --ring: 146 100% 39%;
+
+    --radius: 0.25rem;
+    /* Sharper corners */
+  }
+
+  .dark {
+    /* HackerRank Dark Mode (IDE/Editor vibes) */
+    --background: 225 6% 13%;
+    /* #1e1e1e approx */
+    --foreground: 210 10% 90%;
+
+    --card: 225 6% 16%;
+    --card-foreground: 210 10% 90%;
+
+    --popover: 225 6% 13%;
+    --popover-foreground: 210 10% 90%;
+
+    --primary: 146 70% 50%;
+    /* Softer green for dark mode */
+    --primary-foreground: 225 6% 13%;
+
+    --secondary: 225 6% 20%;
+    --secondary-foreground: 210 10% 90%;
+
+    --muted: 225 6% 20%;
+    --muted-foreground: 215 10% 65%;
+
+    --accent: 225 6% 20%;
+    --accent-foreground: 210 10% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 225 6% 25%;
+    --input: 225 6% 25%;
+    --ring: 146 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

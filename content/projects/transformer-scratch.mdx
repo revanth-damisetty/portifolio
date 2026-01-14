@@ -1,0 +1,28 @@
+---
+title: "Transformer LLM from Scratch"
+date: "2024-12-15"
+excerpt: "A decoder-only Transformer architecture implemented from scratch in PyTorch, mirroring GPT-2 mechanics."
+tags: ["Deep Learning", "PyTorch", "NLP", "Core ML"]
+githubUrl: "https://github.com/revanthdamisetty"
+featured: false
+techStack: ["PyTorch", "Python", "NumPy"]
+methodologies: ["Transformer Architecture", "Self-Attention", "BPE Tokenization"]
+impact: "Demonstrated deep mastery of LLM architecture by successfully training a generative model from first principles, achieving coherent text synthesis."
+workflow:
+  - "Implemented a decoder-only Transformer with Multi-Head Causal Attention and LayerNorm completely from scratch in PyTorch."
+  - "Built a custom BPE tokenizer and training loop with gradient clipping and scheduler, plus nucleus sampling for inference."
+---
+
+## Goal
+To gain a deep, low-level understanding of modern Large Language Models by building one from the ground up, without relying on high-level abstractions like HuggingFace Transformers.
+
+## Implementation Details
+- **Architecture**: Implemented a complete decoder-only Transformer with Multi-Head Causal Attention, Layer Normalization, and Feed-Forward Networks.
+- **Tokenization**: Built a custom Byte Pair Encoding (BPE) tokenizer pipeline to handle raw corpus data.
+- **Optimization**: Wrote a custom training loop with Cross-Entropy Loss, Adam optimizer, gradient clipping, and learning rate scheduling.
+- **Inference**: Implemented nucleuas sampling (Top-k) and Temperature Scaling for controlled text generation.
+
+## Results
+- Successfully trained the model to generate coherent text sequences.
+- Validated performance using perplexity metrics and loss convergence analysis.
+- Demonstrated mastery of attention mechanisms (Query/Key/Value projections, masking) and tensor broadcasting.

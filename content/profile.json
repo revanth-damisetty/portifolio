@@ -1,0 +1,111 @@
+{
+    "name": "Venkata Sai Revanth Damisetty",
+    "title": "Data Scientist | Machine Learning Engineer",
+    "tagline": "Specializing in NLP, Generative AI, and reliable ML systems for healthcare & finance.",
+    "email": "revanth.damisetty@gmail.com",
+    "avatar": "/profile.jpg",
+    "socials": {
+        "github": "https://github.com/revanth-damisetty",
+        "linkedin": "https://linkedin.com/in/revanth-damisetty",
+        "leetcode": "https://leetcode.com/revanthdamisetty"
+    },
+    "skills": {
+        "languages": [
+            "Python",
+            "SQL",
+            "C",
+            "Java",
+            "R",
+            "TypeScript"
+        ],
+        "ml_frameworks": [
+            "PyTorch",
+            "TensorFlow",
+            "Keras",
+            "Scikit-learn",
+            "LangChain",
+            "LangGraph",
+            "LlamaIndex",
+            "HuggingFace"
+        ],
+        "data_engineering": [
+            "Spark",
+            "Hadoop",
+            "Kafka",
+            "Airflow"
+        ],
+        "deployment": [
+            "Docker",
+            "AWS (EC2, S3, RDS)",
+            "GCP",
+            "Flask"
+        ],
+        "tools": [
+            "Git",
+            "Jira",
+            "Tableau",
+            "MongoDB",
+            "ChromaDB",
+            "MySQL"
+        ]
+    },
+    "publications": [
+        {
+            "title": "Optimizing Machine Learning Pipelines: Scalable Mobile-Based Tamil Sign Language Recognition",
+            "venue": "IEEE NKCon 2024",
+            "description": "Addressed the vernacular gap in ASL technology by developing a mobile-first Tamil Sign Language recognition system. Optimized a 'Structured Evolution' ML pipeline involving CLAHE image enhancement, LBP feature extraction, and SVM ensembles to achieve 74% accuracy with <3s latency on mobile devices.",
+            "link": "https://ieeexplore.ieee.org/document/10775069",
+            "logo": "/logos/ieee.svg"
+        },
+        {
+            "title": "Smart Detection of Cyber Threats: A Machine Learning Approach",
+            "venue": "IJSREM 2024",
+            "description": "Designed a real-time Intrusion Detection System (IDS) capable of identifying evolving network threats. Leveraged packet-level feature extraction and Decision Tree classifiers to achieve 99.19% accuracy in distinguishing benign vs. malicious traffic, validated against simulated DDoS attacks.",
+            "link": "https://ijsrem.com/download/smart-detection-of-cyber-threats-a-machine-learning-approach-to-real-time-network-traffic-analysis/",
+            "logo": "/logos/ijsrem-v2.png"
+        }
+    ],
+    "certifications": [
+        {
+            "title": "AWS Solutions Architect – Associate",
+            "issuer": "Amazon Web Services",
+            "date": "In Progress",
+            "logo": "/logos/aws.svg"
+        },
+        {
+            "title": "Machine Learning Specialization",
+            "issuer": "Stanford (Coursera)",
+            "date": "2024",
+            "link": "https://www.coursera.org/account/accomplishments/specialization/JBKT3MS4ECS3",
+            "logo": "/logos/stanford.png"
+        },
+        {
+            "title": "Generative AI for Data Scientists",
+            "issuer": "IBM (Coursera)",
+            "date": "2024",
+            "link": "https://www.coursera.org/account/accomplishments/specialization/DVQ1U3IMQR48",
+            "logo": "/logos/ibm.svg"
+        },
+        {
+            "title": "Fundamentals of Data Visualization",
+            "issuer": "CU Boulder (Coursera)",
+            "date": "2024",
+            "link": "https://www.coursera.org/account/accomplishments/verify/A7OQIMAA6QUA",
+            "logo": "/logos/colorado.png"
+        },
+        {
+            "title": "Data Structures and Algorithms",
+            "issuer": "Udemy",
+            "date": "2023",
+            "link": "https://www.udemy.com/certificate/UC-c4850496-f927-486d-9780-16e5125a5ab7/",
+            "logo": "/logos/udemy.svg"
+        },
+        {
+            "title": "SQL (Intermediate)",
+            "issuer": "HackerRank",
+            "date": "2023",
+            "link": "https://www.hackerrank.com/certificates/e0684f6cf43e",
+            "logo": "/logos/hackerrank.png"
+        }
+    ]
+}

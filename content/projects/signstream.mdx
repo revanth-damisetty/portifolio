@@ -1,0 +1,32 @@
+---
+title: "SignStream: Interactive ASL Recognition"
+date: "2024-12-20"
+excerpt: "Real-time American Sign Language recognition system using MediaPipe and Deep Learning with <150ms latency."
+tags: ["Computer Vision", "Deep Learning", "Flask", "Accessibility"]
+githubUrl: "https://github.com/revanthdamisetty"
+featured: true
+techStack: ["Python", "TensorFlow/Keras", "MediaPipe", "Flask", "OpenCV"]
+methodologies: ["Neural Networks", "Data Augmentation", "Real-time Inference"]
+impact: "Achieved 92.3% test accuracy and <150 ms latency per frame, enabling fluid real-time ASL recognition."
+workflow:
+  - "Utilized MediaPipe Hands to extract 21 3D landmarks and applied tilt-aware augmentation (3D rotational matrices) to boost robustness."
+  - "Deployed a 256–128–64 dense neural network via a Flask REST API with an async OpenCV client for low-latency inference."
+---
+
+## Problem
+Traditional sign language recognition often struggles with real-time performance and robustness against varying environmental conditions like camera angles and signer tilt.
+
+## Solution
+SignStream is an end-to-end ASL recognition pipeline that treats hand tracking as a structured geometry problem rather than raw pixel analysis.
+
+### Key Components
+1.  **Feature Extraction**: Uses **MediaPipe Hands** to extract 21 3D landmarks (x, y, z) per hand.
+2.  **Tilt-Aware Augmentation**: Developed a framework to simulate signer tilt by applying 3D rotational matrices to the landmark data, significantly boosting model robustness.
+3.  **Client-Server Architecture**: 
+    - **Frontend**: OpenCV-based client for capturing video, designed with an async frame loop.
+    - **Backend**: Flask REST API serving the trained Deep Neural Network.
+
+## Impact & Performance
+- **Accuracy**: Achieved **92.3% test accuracy** across 30+ ASL classes.
+- **Latency**: Optimized inference throughput to **<150 ms per frame**, enabling fluid real-time interaction.
+- **Reproducibility**: Created a standardized, tilt-augmented dataset for the research community.
