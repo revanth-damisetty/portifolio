@@ -10,15 +10,13 @@ interface FeaturedProjectsProps {
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
     return (
         <section className="container max-w-screen-2xl py-12 md:py-16 lg:py-24">
-            <div className="flex flex-col items-center justify-between gap-4 md:flex-row mb-8 md:mb-12">
-                <div className="space-y-1 text-center md:text-left">
-                    <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-                        Selected Work
-                    </h2>
-                    <p className="text-muted-foreground">
-                        Highlights of my recent engineering projects.
-                    </p>
-                </div>
+            <div className="flex flex-col items-center justify-center gap-3 text-center mb-8 md:mb-12">
+                <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">
+                    Selected Projects
+                </h2>
+                <p className="text-muted-foreground">
+                    Highlights of my recent engineering projects.
+                </p>
                 <Link href="/projects">
                     <Button variant="ghost">View all projects &rarr;</Button>
                 </Link>

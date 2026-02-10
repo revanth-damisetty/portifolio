@@ -12,12 +12,12 @@ export default function ResumePage() {
             <h1 className="text-3xl font-bold mb-8">Resume</h1>
 
             <div className="flex gap-4 mb-8">
-                <a href="/resume.pdf" download>
+                <a href="/Revanth_resume.pdf" download>
                     <Button size="lg" className="gap-2">
                         <Download className="h-4 w-4" /> Download PDF
                     </Button>
                 </a>
-                <a href="/resume.pdf" target="_blank">
+                <a href="/Revanth_resume.pdf" target="_blank">
                     <Button variant="outline" size="lg" className="gap-2">
                         <FileText className="h-4 w-4" /> Open in New Tab
                     </Button>
@@ -26,7 +26,7 @@ export default function ResumePage() {
 
             <div className="w-full aspect-[1/1.4] bg-muted rounded-lg border shadow-sm overflow-hidden">
                 <iframe
-                    src="/resume.pdf"
+                    src="/Revanth_resume.pdf"
                     className="w-full h-full"
                     title="Resume PDF"
                 />

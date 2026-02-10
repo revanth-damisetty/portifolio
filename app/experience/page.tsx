@@ -28,7 +28,7 @@ export default async function ExperiencePage() {
                 {experience.map((role) => (
                     <Card key={role.id} className="bg-card">
                         <CardHeader>
-                            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                            <div className="flex flex-col gap-3">
                                 <div className="flex items-center gap-3">
                                     {role.logo && (
                                         <div className="relative h-12 w-12 rounded-full overflow-hidden border border-border shrink-0 bg-white p-1">
@@ -45,23 +45,39 @@ export default async function ExperiencePage() {
                                         <CardDescription className="text-lg font-medium text-foreground mt-1">
                                             {role.company}
                                         </CardDescription>
+                                        <div className="flex flex-wrap items-center gap-2 mt-1 text-sm text-muted-foreground">
+                                            <Badge variant="outline" className="h-6 px-2">{role.dates}</Badge>
+                                            <span className="text-muted-foreground">{role.location}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="flex flex-col md:items-end gap-1">
-                                    <Badge variant="outline" className="w-fit">{role.dates}</Badge>
-                                    <span className="text-sm text-muted-foreground">{role.location}</span>
                                 </div>
                             </div>
                         </CardHeader>
                         <CardContent className="space-y-6">
-                            <ul className="list-disc list-outside ml-4 space-y-3 text-muted-foreground">
-                                {role.description.map((desc, i) => (
-                                    <li key={i} className="pl-1 leading-relaxed">
-                                        {/* Parse bold markdown manually if needed, or rely on simple replacement if rendering */}
-                                        <span dangerouslySetInnerHTML={{ __html: desc.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }} />
-                                    </li>
-                                ))}
-                            </ul>
+                            {role.projects ? (
+                                <div className="space-y-5">
+                                    {role.projects.map((project, idx) => (
+                                        <div key={idx} className="space-y-2">
+                                            <h3 className="text-xl font-semibold text-primary">{project.name}</h3>
+                                            <ul className="list-disc list-outside ml-4 space-y-2 text-muted-foreground">
+                                                {project.points.map((point, i) => (
+                                                    <li key={i} className="pl-1 leading-relaxed">
+                                                        <span dangerouslySetInnerHTML={{ __html: point.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }} />
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <ul className="list-disc list-outside ml-4 space-y-3 text-muted-foreground">
+                                    {role.description?.map((desc, i) => (
+                                        <li key={i} className="pl-1 leading-relaxed">
+                                            <span dangerouslySetInnerHTML={{ __html: desc.replace(/\*\*(.*?)\*\*/g, '<strong class=\"text-foreground\">$1</strong>') }} />
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
 
                             <div className="space-y-3 pt-2 border-t border-border/50">
                                 <div className="flex flex-wrap gap-2 items-center">

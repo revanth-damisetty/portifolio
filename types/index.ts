@@ -52,6 +52,15 @@ export interface Profile {
     };
     publications: Publication[];
     certifications: Certification[];
+    education?: {
+        school: string;
+        location: string;
+        degree: string;
+        dates: string;
+        gpa?: string;
+        coursework?: string[];
+        logo?: string;
+    }[];
 }
 
 export interface Experience {
@@ -60,7 +69,11 @@ export interface Experience {
     company: string;
     location: string;
     dates: string;
-    description: string[];
+    description?: string[];
+    projects?: {
+        name: string;
+        points: string[];
+    }[];
     techStack?: string[];
     methodologies?: string[];
     logo?: string;

@@ -1,52 +1,50 @@
 {
     "name": "Venkata Sai Revanth Damisetty",
-    "title": "Data Scientist | Machine Learning Engineer",
-    "tagline": "Specializing in NLP, Generative AI, and reliable ML systems for healthcare & finance.",
+    "title": "Applied Machine Learning Engineer",
+    "tagline": "Building RAG, LLM evaluation, and analytics pipelines for healthcare and enterprise workloads.",
     "email": "revanth.damisetty@gmail.com",
     "avatar": "/profile.jpg",
     "socials": {
         "github": "https://github.com/revanth-damisetty",
         "linkedin": "https://linkedin.com/in/revanth-damisetty",
-        "leetcode": "https://leetcode.com/revanthdamisetty"
+        "leetcode": "https://leetcode.com/u/revanth_damisetty/"
     },
     "skills": {
         "languages": [
             "Python",
             "SQL",
-            "C",
-            "Java",
-            "R",
-            "TypeScript"
+            "R"
         ],
         "ml_frameworks": [
             "PyTorch",
             "TensorFlow",
-            "Keras",
-            "Scikit-learn",
+            "scikit-learn",
             "LangChain",
             "LangGraph",
-            "LlamaIndex",
             "HuggingFace"
         ],
         "data_engineering": [
-            "Spark",
-            "Hadoop",
-            "Kafka",
-            "Airflow"
+            "Pandas",
+            "NumPy",
+            "PostgreSQL",
+            "MongoDB",
+            "ChromaDB",
+            "BigQuery",
+            "REST APIs"
         ],
         "deployment": [
-            "Docker",
             "AWS (EC2, S3, RDS)",
-            "GCP",
-            "Flask"
+            "GCP (BigQuery)",
+            "Docker",
+            "CI/CD",
+            "Linux"
         ],
         "tools": [
             "Git",
-            "Jira",
-            "Tableau",
-            "MongoDB",
-            "ChromaDB",
-            "MySQL"
+            "FastAPI",
+            "Prompt Engineering",
+            "LLM Evaluation",
+            "MLOps"
         ]
     },
     "publications": [
@@ -65,9 +63,47 @@
             "logo": "/logos/ijsrem-v2.png"
         }
     ],
+    "education": [
+        {
+            "school": "Cornell University",
+            "location": "Ithaca, NY, USA",
+            "degree": "Master of Professional Studies, Applied Statistics (Data Science)",
+            "dates": "Aug 2025 – May 2026",
+            "gpa": "3.66 / 4.0",
+            "coursework": [
+                "Linear Models",
+                "Probability Models & Inference",
+                "Data Mining & ML",
+                "Database Management",
+                "NLP",
+                "Big Data Management",
+                "Ethics in Data Science"
+            ],
+            "logo": "/logos/cornell.jpeg"
+        },
+        {
+            "school": "Amrita Vishwa Vidyapeetham",
+            "location": "Coimbatore, India",
+            "degree": "B.Tech, Computer & Communication Engineering (Department Rank: III)",
+            "dates": "Aug 2020 – May 2024",
+            "gpa": "8.47 / 10",
+            "coursework": [
+                "Multivariable Calculus",
+                "Linear Algebra",
+                "Random Processes",
+                "Optimization",
+                "Data Structures & Algorithms",
+                "Artificial Intelligence",
+                "Big Data Analytics",
+                "Cloud Computing",
+                "GPU Programming"
+            ],
+            "logo": "/logos/amrita.jpeg"
+        }
+    ],
     "certifications": [
         {
-            "title": "AWS Certified Machine Learning Engineer - Associate",
+            "title": "Certified ML Engineer Associate",
             "issuer": "Amazon Web Services",
             "date": "In Progress",
             "logo": "/logos/aws.svg"

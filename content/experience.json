@@ -1,58 +1,160 @@
 [
     {
-        "id": "ge-healthcare-edison",
-        "title": "Edison Engineer (EEDP)",
-        "company": "GE Healthcare",
-        "location": "Bengaluru, India",
-        "dates": "Aug 2024 – Jun 2025",
-        "logo": "/ge-logo.png",
-        "description": [
-            "Leading the development of a centralized **Dependency Management Platform** to visualize and remediate vulnerabilities across 10,000+ proprietary libraries, directly impacting the security posture of GE's flagship imaging modalities.",
-            "Architected a scalable graph database solution (Neo4j/NetworkX) to map complex dependency trees across C, Java, and Python microservices, replacing manual spreadsheets and reducing audit capability time from weeks to minutes.",
-            "Designed and deployed a full-stack comparison engine using Angular and Flask that highlights granular version changes (added/removed/modified) between builds, enabling 5+ engineering teams to rapidly perform root-cause analysis on regression defects.",
-            "Accelerated software release cycles by **30%** by automating the detection of circular dependencies and deprecated packages, ensuring strictly compliant build artifacts for FDA-regulated releases."
+        "id": "painmed-pa-mle",
+        "title": "Applied Machine Learning Engineer (Founder-led project)",
+        "company": "PainMed PA",
+        "location": "Austin, TX, USA",
+        "dates": "Sep 2025 \u2013 Present",
+        "logo": "/logos/painmed_pa_logo.jpeg",
+        "projects": [
+            {
+                "name": "ERA Resubmission Automation",
+                "points": [
+                    "Built fault-tolerant ETL in **Python/SQL** (Pandas/NumPy) to normalize **X12-835** claims into **PostgreSQL** on **AWS (EC2, S3, RDS)**; wrapped pipelines with validation guardrails and **Dockerized CI/CD**.",
+                    "Enabled **LangGraph + ChromaDB** services to auto-draft resubmission packets at **10k+/week** while holding latency SLOs; added schema validators, retry/backoff, and observability hooks for safe batch regenerations.",
+                    "**Result: Removed manual packet prep and shortened reimbursement turnaround, keeping throughput at 10k+/week.**"
+                ]
+            },
+            {
+                "name": "Market Signal Intelligence",
+                "points": [
+                    "Designed NLP ingestion on **Python + Spark** into **GCP BigQuery**, generating **HuggingFace** embeddings and unsupervised clusters to surface outbound-sales topics from **~8k posts/month**.",
+                    "Tuned partitioning, materialized similarity scores, and exposed a low-latency analytics API feeding dashboards with sub-second topic lookups.",
+                    "**Result: Delivered topic intelligence over ~8k posts/month with sub-second latency, informing outreach prioritization without extra analyst headcount.**"
+                ]
+            }
         ],
         "techStack": [
             "Python",
-            "Neo4j",
-            "Angular",
-            "Flask",
+            "SQL",
+            "Pandas",
+            "NumPy",
+            "PostgreSQL",
+            "AWS (EC2, S3, RDS)",
+            "LangGraph",
+            "ChromaDB",
             "Docker",
-            "Jenkins"
+            "CI/CD",
+            "Spark",
+            "BigQuery"
         ],
         "methodologies": [
-            "Graph Theory",
-            "System Design",
-            "Secure SDL",
-            "DevSecOps"
+            "Retrieval-Augmented Generation",
+            "ETL",
+            "LLM Inference",
+            "MLOps"
+        ]
+    },
+    {
+        "id": "lanl-mle",
+        "title": "Machine Learning Engineer (Industry Client Collaboration)",
+        "company": "Los Alamos National Laboratory",
+        "location": "Los Alamos, NM, USA",
+        "dates": "Jan 2026 \u2013 May 2026",
+        "logo": "/logos/los_alamos_national_laboratory_logo.jpeg",
+        "projects": [
+            {
+                "name": "Probabilistic Calibration of LLMs",
+                "points": [
+                    "Built a simulation-driven evaluation harness in **Python/R** that generates synthetic datasets from controllable **Gaussian Mixture Model (GMM)** DGPs (means, covariances, priors, overlap, dimensionality) with exact **Bayes posteriors** for ground truth.",
+                    "Extended generators to **non-Gaussian** mixtures and manifold datasets (**t-distributions**, **skew-normals**, **two-moons**) to stress-test calibration beyond simple clusters.",
+                    "Implemented a prompt interaction layer that serializes numeric features and probes **GPT / Claude / Gemini / Perplexity** under **zero-shot/few-shot**, **DGP-disclosed/hidden**, **overconfidence-deterring**, and **JSON-schema-constrained** prompts to isolate prompt effects on probability outputs.",
+                    "Evaluated outputs with **Brier score**, **ECE**, **calibration curves**, **log loss**, and **QQ-plots**; benchmarked against classical baselines (**EM-GMM posteriors**, **soft k-means**, **random forests**, **gradient boosting**, **neural nets**).",
+                    "Ran sensitivity analyses over **dimensionality**, **cluster overlap**, **prompt design**, and **few-shot size** to map where LLM probabilities stay calibrated vs. overconfident.",
+                    "**Result: Produced defensible calibration scorecards showing when LLM probability outputs can be trusted and when classical probabilistic models outperform them.**"
+                ]
+            }
+        ],
+        "techStack": [
+            "Python",
+            "R",
+            "Pandas",
+            "NumPy",
+            "SciPy",
+            "scikit-learn",
+            "HuggingFace",
+            "Matplotlib",
+            "Seaborn",
+            "MLflow"
+        ],
+        "methodologies": [
+            "LLM Evaluation",
+            "Calibration",
+            "Prompt Engineering",
+            "Experiment Tracking"
+        ]
+    },
+    {
+        "id": "ge-healthcare-sde",
+        "title": "Software Development Engineer (Edison Engineer)",
+        "company": "GE Healthcare",
+        "location": "Bengaluru, India",
+        "dates": "Aug 2024 \u2013 Jun 2025",
+        "logo": "/ge-logo.png",
+        "projects": [
+            {
+                "name": "Hospital Compliance Automation",
+                "points": [
+                    "Productionized a **RAG semantic search** service in **Python/FastAPI** using **HuggingFace** encoders and **ChromaDB** on **AWS (EC2, S3)** to answer hospital compliance questionnaires.",
+                    "Implemented caching, schema validation, and latency tuning across retrieval/inference paths; Dockerized CI/CD for repeatable, low-latency deployments.",
+                    "Integrated guardrails to enforce hospital-specific constraints and audited responses with monitoring dashboards.",
+                    "**Result: Reduced compliance questionnaire effort by ~60% while keeping answers aligned with regulatory wording.**"
+                ]
+            }
+        ],
+        "techStack": [
+            "Python",
+            "FastAPI",
+            "HuggingFace",
+            "ChromaDB",
+            "AWS (EC2, S3)",
+            "Docker",
+            "CI/CD",
+            "Caching",
+            "Semantic Search"
+        ],
+        "methodologies": [
+            "Retrieval-Augmented Generation",
+            "Latency Optimization",
+            "DevSecOps",
+            "Compliance QA"
         ]
     },
     {
         "id": "ge-healthcare-intern",
-        "title": "Early Identification (EID) Intern",
+        "title": "Software Development Engineer Intern",
         "company": "GE Healthcare",
         "location": "Bengaluru, India",
-        "dates": "Jan 2024 – Jun 2024",
+        "dates": "Jan 2024 \u2013 Jun 2024",
         "logo": "/ge-logo.png",
-        "description": [
-            "Engineered an enterprise-grade **Compliance RAG Automation** system to streamline the answering of complex hospital RFPs, reducing manual effort for marketing executives by **60%**.",
-            "Built a high-performance retrieval pipeline using **LangChain** and **ChromaDB**, indexing over 10,000 pages of unstructured policy documents, technical manuals, and compliance certificates.",
-            "Implemented a custom semantic search algorithm blending TF-IDF and transformer-based dense embeddings to maximize retrieval accuracy for niche medical terminology.",
-            "Developed a Microsoft Office plugin that integrates directly into the executive workflow, providing real-time, context-aware answer suggestions and citation links via a local LLM inference engine (Ollama)."
+        "projects": [
+            {
+                "name": "Dependency Management and Analysis Platform",
+                "points": [
+                    "Built Python crawlers for **static + dynamic dependency extraction** across C/Java/Python services; normalized metadata for multi-language codebases.",
+                    "Modeled dependency graphs in **MongoDB** and versioned specs in **MySQL** to enable millisecond graph queries and diffing.",
+                    "Developed an **Angular** UI backed by **Flask** APIs for interactive graph visualization, semantic search, and version-mismatch alerts.",
+                    "Added build-to-build comparison views and CI/CD alerts on anomalous transitive pulls to pre-empt regressions.",
+                    "**Result: Improved release cadence and fault isolation by surfacing risky dependency deltas early in the pipeline.**"
+                ]
+            }
         ],
         "techStack": [
             "Python",
-            "LangChain",
-            "ChromaDB",
-            "Ollama",
-            "Transformers",
-            "React"
+            "Angular",
+            "Flask",
+            "MongoDB",
+            "MySQL",
+            "Docker",
+            "CI/CD",
+            "Semantic Search",
+            "Graph Visualization"
         ],
         "methodologies": [
-            "Retrieval-Augmented Generation",
-            "NLP",
-            "Semantic Search",
-            "Prompt Engineering"
+            "Dependency Analysis",
+            "Graph Modeling",
+            "CI/CD Observability",
+            "DevSecOps"
         ]
     }
 ]

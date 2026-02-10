@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { Project, Profile } from "@/types";
+import { Project, Profile, Experience } from "@/types";
 
 const contentDirectory = path.join(process.cwd(), "content");
 
@@ -57,4 +57,11 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
         content,
         ...data,
     } as Project;
+}
+
+export async function getExperience(): Promise<Experience[]> {
+    const filePath = path.join(contentDirectory, "experience.json");
+    if (!fs.existsSync(filePath)) return [];
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    return JSON.parse(fileContents) as Experience[];
 }

@@ -1,4 +1,4 @@
-import { Mail, MapPin, Github, Linkedin, Code2 } from "lucide-react"
+import { Mail, MapPin, Github, Linkedin, Code2, Phone } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
@@ -13,13 +13,20 @@ export default function ContactPage() {
                 <div className="space-y-6">
                     <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl">Let&apos;s Work Together</h1>
                     <p className="text-xl text-muted-foreground md:text-2xl max-w-[800px] leading-relaxed">
-                        I&apos;m currently open to new opportunities in ML Engineering and Data Infrastructure.
-                        Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
+                        Available for ML engineering roles, RAG/LLM projects, and data infrastructure consulting. Open to relocation with three years of OPT sponsorship remaining. I usually reply within 24 hours.
                     </p>
                 </div>
 
                 <div className="space-y-8 w-full flex flex-col items-center">
                     <div className="flex flex-col items-center gap-6 text-muted-foreground w-full">
+                        <div className="flex items-center gap-4 group transition-all hover:scale-105 duration-200">
+                            <div className="p-3 bg-muted rounded-full group-hover:bg-[#00ea64]/10 transition-colors">
+                                <Phone className="h-8 w-8 md:h-10 md:w-10 group-hover:text-[#00ea64] transition-colors" />
+                            </div>
+                            <a href="tel:+16073396540" className="hover:text-foreground text-xl md:text-2xl font-medium transition-colors">
+                                +1 (607) 339-6540
+                            </a>
+                        </div>
                         <div className="flex items-center gap-4 group transition-all hover:scale-105 duration-200">
                             <div className="p-3 bg-muted rounded-full group-hover:bg-[#00ea64]/10 transition-colors">
                                 <Mail className="h-8 w-8 md:h-10 md:w-10 group-hover:text-[#00ea64] transition-colors" />
@@ -51,10 +58,10 @@ export default function ContactPage() {
                                 <span className="text-base text-muted-foreground">@revanth-damisetty</span>
                             </Link>
 
-                            <Link href="https://leetcode.com/revanthdamisetty" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-[#00ea64]/50">
+                            <Link href="https://leetcode.com/u/revanth_damisetty/" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-[#00ea64]/50">
                                 <Code2 className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-[#00ea64] transition-colors" />
                                 <span className="text-lg font-bold group-hover:text-[#00ea64] transition-colors mb-1">LeetCode</span>
-                                <span className="text-base text-muted-foreground">@revanthdamisetty</span>
+                                <span className="text-base text-muted-foreground">@revanth_damisetty</span>
                             </Link>
                         </div>
                     </div>
