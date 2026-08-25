@@ -26,7 +26,7 @@ export default async function ExperiencePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
                 {experience.map((role) => (
-                    <Card key={role.id} className="bg-card">
+                    <Card key={role.id}>
                         <CardHeader>
                             <div className="flex flex-col gap-3">
                                 <div className="flex items-center gap-3">

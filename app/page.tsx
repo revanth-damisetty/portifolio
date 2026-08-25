@@ -11,13 +11,14 @@ export default async function Home() {
     const profile = await getProfile()
     const projects = await getProjects()
     const experiences = await getExperience()
+    const homeExperiences = experiences.filter(e => e.id === "apple-siriai-intern" || e.id === "ge-healthcare-sde")
     const featuredProjects = projects.filter(p => p.featured).slice(0, 3)
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between">
             <Hero profile={profile} />
             <Education education={profile.education} />
-            <ExperienceHighlight experiences={experiences} />
+            <ExperienceHighlight experiences={homeExperiences} />
             <FeaturedProjects projects={featuredProjects} />
             <Skills skills={profile.skills} />
             <Publications publications={profile.publications} />

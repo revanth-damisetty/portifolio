@@ -22,7 +22,7 @@ export function Publications({ publications }: PublicationsProps) {
             </div>
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
                 {publications.map((pub, index) => (
-                    <Card key={index} className="bg-muted/50">
+                    <Card key={index}>
                         <CardHeader>
                             <div className="flex justify-between items-start gap-4">
                                 {pub.logo && (

@@ -3,19 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Moon, Sun, Menu, X } from "lucide-react"
-import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
+import { Menu, X } from "lucide-react"
+import { useState } from "react"
 
 export function Navbar() {
     const pathname = usePathname()
-    const { setTheme, theme } = useTheme()
-    const [mounted, setMounted] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
 
     const routes = [
         { href: "/", label: "Home" },
@@ -26,11 +19,11 @@ export function Navbar() {
     ]
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-[#1C1E29] text-white border-b border-[#1C1E29]">
+        <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md text-foreground">
             <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4 sm:px-8">
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2">
-                    <span className="font-bold tracking-tight text-white hover:text-[#00ea64] transition-colors">
+                    <span className="font-bold tracking-tight text-foreground hover:text-primary transition-colors">
                         Revanth Damisetty
                     </span>
                 </Link>
@@ -42,36 +35,24 @@ export function Navbar() {
                             key={route.href}
                             href={route.href}
                             className={cn(
-                                "px-4 py-2 text-sm font-medium transition-colors hover:text-white border-b-2 border-transparent hover:border-[#00ea64]",
-                                pathname === route.href ? "text-white border-[#00ea64]" : "text-gray-400"
+                                "px-4 py-2 text-sm font-medium transition-colors hover:text-foreground border-b-2 border-transparent hover:border-primary/40",
+                                pathname === route.href ? "text-foreground border-primary" : "text-muted-foreground"
                             )}
                         >
                             {route.label}
                         </Link>
                     ))}
-                    <Link href="/resume" className="ml-2 inline-flex items-center justify-center rounded-sm text-sm font-medium bg-[#00ea64] text-[#1C1E29] hover:bg-[#00c853] transition-colors h-8 px-4 py-2">
+                    <Link href="/resume" className="ml-2 inline-flex items-center justify-center rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors h-8 px-4 py-2">
                         Resume
                     </Link>
                 </div>
 
-                {/* Right side: Theme toggle + Mobile menu button */}
+                {/* Right side: Mobile menu button */}
                 <div className="flex items-center gap-2">
-                    <button
-                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                        className="inline-flex h-9 w-9 items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-white/10 text-white focus-visible:outline-none"
-                        aria-label="Toggle theme"
-                    >
-                        {mounted ? (
-                            theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />
-                        ) : (
-                            <span className="h-4 w-4" />
-                        )}
-                    </button>
-
                     {/* Mobile menu button */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-white/10 text-white focus-visible:outline-none"
+                        className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent text-foreground focus-visible:outline-none"
                         aria-label="Toggle menu"
                     >
                         {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -81,7 +62,7 @@ export function Navbar() {
 
             {/* Mobile Navigation Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden border-t border-white/10 bg-[#1C1E29]">
+                <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
                     <div className="container max-w-screen-2xl px-4 py-4 space-y-2">
                         {routes.map((route) => (
                             <Link
@@ -89,10 +70,10 @@ export function Navbar() {
                                 href={route.href}
                                 onClick={() => setMobileMenuOpen(false)}
                                 className={cn(
-                                    "block px-4 py-2 text-sm font-medium rounded-sm transition-colors",
+                                    "block px-4 py-2 text-sm font-medium rounded-md transition-colors",
                                     pathname === route.href
-                                        ? "bg-[#00ea64]/10 text-[#00ea64] border-l-2 border-[#00ea64]"
-                                        : "text-gray-400 hover:text-white hover:bg-white/5"
+                                        ? "bg-primary/10 text-primary border-l-2 border-primary"
+                                        : "text-muted-foreground hover:text-foreground hover:bg-accent"
                                 )}
                             >
                                 {route.label}
@@ -101,7 +82,7 @@ export function Navbar() {
                         <Link
                             href="/resume"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="block w-full text-center rounded-sm text-sm font-medium bg-[#00ea64] text-[#1C1E29] hover:bg-[#00c853] transition-colors py-2 px-4 mt-4"
+                            className="block w-full text-center rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors py-2 px-4 mt-4"
                         >
                             Resume
                         </Link>

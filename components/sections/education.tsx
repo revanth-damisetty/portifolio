@@ -23,8 +23,7 @@ export function Education({ education }: EducationProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                 {education.map((edu, idx) => (
-                    <Card key={idx} className="h-full border-border/70 bg-card">
-                        <div className="h-1.5 w-full bg-primary/80" />
+                    <Card key={idx} className="h-full">
                         <CardHeader className="space-y-4">
                             <div className="flex flex-col items-center gap-3">
                                 {edu.logo && (

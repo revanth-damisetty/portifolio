@@ -32,6 +32,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# brainstorming companion (local, ephemeral mockups)
+.superpowers/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

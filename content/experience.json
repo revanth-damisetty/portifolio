@@ -1,5 +1,35 @@
 [
     {
+        "id": "apple-siriai-intern",
+        "title": "SiriAI UX Software Intern (Siri Home & System Experience)",
+        "company": "Apple",
+        "location": "Cupertino, CA, USA",
+        "dates": "May 2026 – Aug 2026",
+        "logo": "/logos/apple.png",
+        "projects": [
+            {
+                "name": "Multi-Agent Bug Triage & Prioritization Pipeline",
+                "points": [
+                    "Built a team-configurable multi-agent pipeline automating bug routing, deduplication, and prioritization, live in production across **2+ teams** within Siri User Experiences.",
+                    "Engineered modular, context-isolated agent specialization over monolithic prompting in **Python**, achieving **85%** routing accuracy and **96%** priority-bucketing accuracy on a leakage-safe evaluation harness.",
+                    "Architected critic/debate agents for multi-agent conflict resolution, a **ChromaDB**-backed vector-similarity search engine for duplicate detection, and automated root-cause log analysis, deployed on an internal AI platform via a shared dataset with per-team configuration.",
+                    "**Result: Cut ~1 workday per week per engineer in manual triage time, at lower operating cost than the incumbent internal tool.**"
+                ]
+            }
+        ],
+        "techStack": [
+            "Python",
+            "Claude Code",
+            "ChromaDB"
+        ],
+        "methodologies": [
+            "Agentic Workflows",
+            "Multi-Agent Systems",
+            "Vector Similarity Search",
+            "LLM Evaluation"
+        ]
+    },
+    {
         "id": "painmed-pa-mle",
         "title": "Applied Machine Learning Engineer (Founder-led project)",
         "company": "PainMed PA",

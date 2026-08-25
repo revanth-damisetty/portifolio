@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Experience } from "@/types";
@@ -8,9 +9,6 @@ interface ExperienceHighlightProps {
 
 export function ExperienceHighlight({ experiences }: ExperienceHighlightProps) {
     if (!experiences || experiences.length === 0) return null;
-
-    // Take top 3 experiences
-    const featured = experiences.slice(0, 3);
 
     return (
         <section className="container max-w-screen-2xl py-12 md:py-16 lg:py-24">
@@ -23,20 +21,27 @@ export function ExperienceHighlight({ experiences }: ExperienceHighlightProps) {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-                {featured.map((role) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
+                {experiences.map((role) => {
                     const project = role.projects?.[0];
                     const firstPoint = project?.points?.[0] ?? "";
                     const resultPoint = project?.points?.find(p => p.toLowerCase().startsWith("**result")) ?? "";
                     return (
-                        <Card key={role.id} className="h-full border-border/70 bg-card flex flex-col">
-                            <div className="h-1 w-full bg-primary/80" />
-                            <CardHeader className="space-y-2">
-                                <div className="flex items-center justify-between gap-2">
-                                    <div className="space-y-1">
-                                        <CardTitle className="text-lg font-semibold text-primary">{role.title}</CardTitle>
-                                        <CardDescription className="text-sm font-medium text-foreground">{role.company}</CardDescription>
+                        <Card key={role.id} className="h-full flex flex-col">
+                            <CardHeader className="space-y-3">
+                                {role.logo && (
+                                    <div className="relative h-20 w-20">
+                                        <Image
+                                            src={role.logo}
+                                            alt={`${role.company} logo`}
+                                            fill
+                                            className="object-contain"
+                                        />
                                     </div>
+                                )}
+                                <div className="space-y-1">
+                                    <CardTitle className="text-lg font-semibold text-primary">{role.title}</CardTitle>
+                                    <CardDescription className="text-sm font-medium text-foreground">{role.company}</CardDescription>
                                 </div>
                                 <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
                                     <Badge variant="outline" className="h-6 px-2">{role.dates}</Badge>

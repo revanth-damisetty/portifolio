@@ -20,16 +20,16 @@ export default function ContactPage() {
                 <div className="space-y-8 w-full flex flex-col items-center">
                     <div className="flex flex-col items-center gap-6 text-muted-foreground w-full">
                         <div className="flex items-center gap-4 group transition-all hover:scale-105 duration-200">
-                            <div className="p-3 bg-muted rounded-full group-hover:bg-[#00ea64]/10 transition-colors">
-                                <Phone className="h-8 w-8 md:h-10 md:w-10 group-hover:text-[#00ea64] transition-colors" />
+                            <div className="p-3 bg-muted rounded-full group-hover:bg-primary/10 transition-colors">
+                                <Phone className="h-8 w-8 md:h-10 md:w-10 group-hover:text-primary transition-colors" />
                             </div>
                             <a href="tel:+16073396540" className="hover:text-foreground text-xl md:text-2xl font-medium transition-colors">
                                 +1 (607) 339-6540
                             </a>
                         </div>
                         <div className="flex items-center gap-4 group transition-all hover:scale-105 duration-200">
-                            <div className="p-3 bg-muted rounded-full group-hover:bg-[#00ea64]/10 transition-colors">
-                                <Mail className="h-8 w-8 md:h-10 md:w-10 group-hover:text-[#00ea64] transition-colors" />
+                            <div className="p-3 bg-muted rounded-full group-hover:bg-primary/10 transition-colors">
+                                <Mail className="h-8 w-8 md:h-10 md:w-10 group-hover:text-primary transition-colors" />
                             </div>
                             <a href="mailto:revanth.damisetty@gmail.com" className="hover:text-foreground text-xl md:text-2xl font-medium transition-colors">
                                 revanth.damisetty@gmail.com
@@ -46,21 +46,21 @@ export default function ContactPage() {
                     <div className="pt-8 w-full border-t border-border mt-8">
                         <p className="text-xl font-semibold text-foreground mb-8">Connect with me:</p>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
-                            <Link href="https://github.com/revanth-damisetty" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-[#00ea64]/50">
-                                <Github className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-[#00ea64] transition-colors" />
-                                <span className="text-lg font-bold group-hover:text-[#00ea64] transition-colors mb-1">GitHub</span>
+                            <Link href="https://github.com/revanth-damisetty" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-primary/50">
+                                <Github className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
+                                <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">GitHub</span>
                                 <span className="text-base text-muted-foreground">@revanth-damisetty</span>
                             </Link>
 
-                            <Link href="https://linkedin.com/in/revanth-damisetty" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-[#00ea64]/50">
-                                <Linkedin className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-[#00ea64] transition-colors" />
-                                <span className="text-lg font-bold group-hover:text-[#00ea64] transition-colors mb-1">LinkedIn</span>
+                            <Link href="https://linkedin.com/in/revanth-damisetty" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-primary/50">
+                                <Linkedin className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
+                                <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">LinkedIn</span>
                                 <span className="text-base text-muted-foreground">@revanth-damisetty</span>
                             </Link>
 
-                            <Link href="https://leetcode.com/u/revanth_damisetty/" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-[#00ea64]/50">
-                                <Code2 className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-[#00ea64] transition-colors" />
-                                <span className="text-lg font-bold group-hover:text-[#00ea64] transition-colors mb-1">LeetCode</span>
+                            <Link href="https://leetcode.com/u/revanth_damisetty/" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-primary/50">
+                                <Code2 className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
+                                <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">LeetCode</span>
                                 <span className="text-base text-muted-foreground">@revanth_damisetty</span>
                             </Link>
                         </div>

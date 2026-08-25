@@ -23,7 +23,7 @@ export function Certifications({ certifications }: CertificationsProps) {
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
                 {certifications.map((cert, index) => (
-                    <Card key={index} className="bg-background border-border/60 hover:border-border transition-colors group relative overflow-hidden">
+                    <Card key={index} className="hover:border-primary/40 transition-colors group relative overflow-hidden">
                         <CardHeader className="pb-3">
                             <div className="flex justify-between items-start gap-2">
                                 <div className="bg-white p-2 rounded-full ring-1 ring-border/50 shrink-0 h-16 w-16 flex items-center justify-center overflow-hidden">

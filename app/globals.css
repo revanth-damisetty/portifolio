@@ -4,46 +4,7 @@
 
 @layer base {
   :root {
-    /* HackerRank Light Theme Base */
-    --background: 210 20% 98%;
-    /* Very light gray #f3f7f7 approx */
-    --foreground: 215 14% 34%;
-    /* Dark gray #39424e */
-
-    --card: 0 0% 100%;
-    --card-foreground: 215 14% 34%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 14% 34%;
-
-    /* HackerRank Green */
-    --primary: 146 100% 39%;
-    /* #00c853 / #00ea64 approx */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 215 14% 34%;
-
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 10% 55%;
-
-    --accent: 210 20% 96%;
-    --accent-foreground: 215 14% 34%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214 20% 85%;
-    /* Light border #d0d4dd */
-    --input: 214 20% 85%;
-    --ring: 146 100% 39%;
-
-    --radius: 0.25rem;
-    /* Sharper corners */
-  }
-
-  .dark {
-    /* HackerRank Dark Mode (IDE/Editor vibes) */
+    /* HackerRank Dark Mode (IDE/Editor vibes) — radius stays Apple-style. Night mode only, no light theme. */
     --background: 225 6% 13%;
     /* #1e1e1e approx */
     --foreground: 210 10% 90%;
@@ -73,6 +34,9 @@
     --border: 225 6% 25%;
     --input: 225 6% 25%;
     --ring: 146 70% 50%;
+
+    --radius: 0.75rem;
+    /* Apple-style rounder corners */
   }
 }
 
