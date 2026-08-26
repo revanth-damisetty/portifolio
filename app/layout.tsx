@@ -4,6 +4,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
+import { MotionProvider } from '@/components/motion-provider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'], variable: '--font-mono' });
@@ -19,13 +20,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className="dark">
-            <body className={cn(inter.variable, sourceCodePro.variable, "min-h-screen bg-background font-sans antialiased flex flex-col")}>
-                <Navbar />
-                <div className="flex-1">
-                    {children}
-                </div>
-                <Footer />
+        <html lang="en">
+            <body className={cn(inter.variable, sourceCodePro.variable, "relative min-h-screen bg-background font-sans antialiased flex flex-col")}>
+                <MotionProvider>
+                    <Navbar />
+                    <div className="flex-1">
+                        {children}
+                    </div>
+                    <Footer />
+                </MotionProvider>
             </body>
         </html>
     );

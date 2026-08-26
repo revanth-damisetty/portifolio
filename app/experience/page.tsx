@@ -21,10 +21,10 @@ export default async function ExperiencePage() {
     const experience = await getExperience()
 
     return (
-        <div className="container max-w-6xl py-12 md:py-16 lg:py-24 px-4 md:px-6 flex flex-col items-center">
+        <div className="container max-w-screen-2xl py-12 md:py-16 lg:py-24 px-4 md:px-6 flex flex-col items-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl mb-12 text-center">Experience</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 gap-6 w-full">
                 {experience.map((role) => (
                     <Card key={role.id}>
                         <CardHeader>

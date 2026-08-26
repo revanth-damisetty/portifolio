@@ -1,7 +1,11 @@
+"use client"
+
+import { motion } from "framer-motion"
 import { Profile } from "@/types"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { fadeInUp, staggerContainer } from "@/lib/motion"
 
 interface PublicationsProps {
     publications: Profile["publications"]
@@ -12,17 +16,30 @@ export function Publications({ publications }: PublicationsProps) {
 
     return (
         <section className="container max-w-screen-2xl py-12 md:py-16 border-t border-border/40">
-            <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-10">
+            <motion.div
+                className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-10"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={fadeInUp}
+            >
                 <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">
                     Research & Publications
                 </h2>
                 <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
                     Contribtions to the academic community in Machine Learning and Cybersecurity.
                 </p>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            </motion.div>
+            <motion.div
+                className="grid gap-6 md:grid-cols-2"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={staggerContainer}
+            >
                 {publications.map((pub, index) => (
-                    <Card key={index}>
+                    <motion.div key={index} variants={fadeInUp}>
+                        <Card>
                         <CardHeader>
                             <div className="flex justify-between items-start gap-4">
                                 {pub.logo && (
@@ -59,9 +76,10 @@ export function Publications({ publications }: PublicationsProps) {
                                 {pub.description}
                             </CardDescription>
                         </CardContent>
-                    </Card>
+                        </Card>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     )
 }

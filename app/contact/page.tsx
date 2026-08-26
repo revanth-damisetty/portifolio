@@ -1,5 +1,6 @@
 import { Mail, MapPin, Github, Linkedin, Code2, Phone } from "lucide-react"
 import Link from "next/link"
+import { Card } from "@/components/ui/card"
 
 export const metadata = {
     title: 'Contact | Revanth Damisetty',
@@ -9,10 +10,10 @@ export const metadata = {
 export default function ContactPage() {
     return (
         <div className="container max-w-screen-2xl py-12 md:py-24 lg:py-32 px-4 md:px-6 flex flex-col items-center text-center justify-center min-h-[calc(100vh-14rem)]">
-            <div className="space-y-12 flex flex-col items-center text-center max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div className="space-y-6">
+            <div className="w-full space-y-12 flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="space-y-6 max-w-3xl">
                     <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl">Let&apos;s Work Together</h1>
-                    <p className="text-xl text-muted-foreground md:text-2xl max-w-[800px] leading-relaxed">
+                    <p className="text-xl text-muted-foreground md:text-2xl max-w-[800px] leading-relaxed mx-auto">
                         Available for ML engineering roles, RAG/LLM projects, and data infrastructure consulting. Open to relocation with three years of OPT sponsorship remaining. I usually reply within 24 hours.
                     </p>
                 </div>
@@ -46,22 +47,28 @@ export default function ContactPage() {
                     <div className="pt-8 w-full border-t border-border mt-8">
                         <p className="text-xl font-semibold text-foreground mb-8">Connect with me:</p>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
-                            <Link href="https://github.com/revanth-damisetty" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-primary/50">
-                                <Github className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
-                                <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">GitHub</span>
-                                <span className="text-base text-muted-foreground">@revanth-damisetty</span>
+                            <Link href="https://github.com/revanth-damisetty" target="_blank" rel="noreferrer">
+                                <Card className="flex flex-col items-center p-6 group cursor-pointer">
+                                    <Github className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
+                                    <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">GitHub</span>
+                                    <span className="text-base text-muted-foreground">@revanth-damisetty</span>
+                                </Card>
                             </Link>
 
-                            <Link href="https://linkedin.com/in/revanth-damisetty" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-primary/50">
-                                <Linkedin className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
-                                <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">LinkedIn</span>
-                                <span className="text-base text-muted-foreground">@revanth-damisetty</span>
+                            <Link href="https://linkedin.com/in/revanth-damisetty" target="_blank" rel="noreferrer">
+                                <Card className="flex flex-col items-center p-6 group cursor-pointer">
+                                    <Linkedin className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
+                                    <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">LinkedIn</span>
+                                    <span className="text-base text-muted-foreground">@revanth-damisetty</span>
+                                </Card>
                             </Link>
 
-                            <Link href="https://leetcode.com/u/revanth_damisetty/" target="_blank" rel="noreferrer" className="flex flex-col items-center p-6 bg-muted/50 rounded-lg hover:bg-muted transition-colors hover:scale-105 duration-200 group border border-border/50 hover:border-primary/50">
-                                <Code2 className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
-                                <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">LeetCode</span>
-                                <span className="text-base text-muted-foreground">@revanth_damisetty</span>
+                            <Link href="https://leetcode.com/u/revanth_damisetty/" target="_blank" rel="noreferrer">
+                                <Card className="flex flex-col items-center p-6 group cursor-pointer">
+                                    <Code2 className="h-10 w-10 md:h-12 md:w-12 mb-4 group-hover:text-primary transition-colors" />
+                                    <span className="text-lg font-bold group-hover:text-primary transition-colors mb-1">LeetCode</span>
+                                    <span className="text-base text-muted-foreground">@revanth_damisetty</span>
+                                </Card>
                             </Link>
                         </div>
                     </div>

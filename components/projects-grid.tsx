@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { Project } from "@/types"
 import { ProjectCard } from "@/components/project-card"
 import { Input } from "@/components/ui/input"
@@ -72,9 +73,21 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
                 </div>
             ) : (
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {filteredProjects.map((project) => (
-                        <ProjectCard key={project.slug} project={project} />
-                    ))}
+                    <AnimatePresence mode="popLayout">
+                        {filteredProjects.map((project) => (
+                            <motion.div
+                                key={project.slug}
+                                className="h-full"
+                                layout
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.97 }}
+                                transition={{ type: "spring", duration: 0.3, bounce: 0 }}
+                            >
+                                <ProjectCard project={project} />
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
                 </div>
             )}
         </div>

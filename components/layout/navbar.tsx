@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 export function Navbar() {
     const pathname = usePathname()
@@ -61,34 +62,42 @@ export function Navbar() {
             </div>
 
             {/* Mobile Navigation Menu */}
-            {mobileMenuOpen && (
-                <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
-                    <div className="container max-w-screen-2xl px-4 py-4 space-y-2">
-                        {routes.map((route) => (
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        className="md:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-md"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ type: "spring", duration: 0.35, bounce: 0 }}
+                    >
+                        <div className="container max-w-screen-2xl px-4 py-4 space-y-2">
+                            {routes.map((route) => (
+                                <Link
+                                    key={route.href}
+                                    href={route.href}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={cn(
+                                        "block px-4 py-2 text-sm font-medium rounded-md transition-colors",
+                                        pathname === route.href
+                                            ? "bg-primary/10 text-primary border-l-2 border-primary"
+                                            : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                                    )}
+                                >
+                                    {route.label}
+                                </Link>
+                            ))}
                             <Link
-                                key={route.href}
-                                href={route.href}
+                                href="/resume"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className={cn(
-                                    "block px-4 py-2 text-sm font-medium rounded-md transition-colors",
-                                    pathname === route.href
-                                        ? "bg-primary/10 text-primary border-l-2 border-primary"
-                                        : "text-muted-foreground hover:text-foreground hover:bg-accent"
-                                )}
+                                className="block w-full text-center rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors py-2 px-4 mt-4"
                             >
-                                {route.label}
+                                Resume
                             </Link>
-                        ))}
-                        <Link
-                            href="/resume"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block w-full text-center rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors py-2 px-4 mt-4"
-                        >
-                            Resume
-                        </Link>
-                    </div>
-                </div>
-            )}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     )
 }
