@@ -103,10 +103,10 @@
     ],
     "certifications": [
         {
-            "title": "Certified ML Engineer Associate",
-            "issuer": "Amazon Web Services",
+            "title": "Claude Certified Architect Fundamentals",
+            "issuer": "Anthropic",
             "date": "In Progress",
-            "logo": "/logos/aws.svg"
+            "logo": "/logos/anthropic.svg"
         },
         {
             "title": "Machine Learning Specialization",
